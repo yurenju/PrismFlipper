@@ -2,6 +2,8 @@ package idv.yurenju.prismflipper;
 
 import idv.yurenju.prismflipper.widget.PrismFlipper;
 import android.app.Activity;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -20,6 +22,8 @@ public class PrismFlipperActivity extends Activity {
 		final String[] texts = new String[] { "Refresh", "go to last read position",
 				"last read post" };
         flipper.setFrontText(texts[0]);
+        flipper.setBackground(new ColorDrawable(0xff3465a4));
+        flipper.setTextColor(Color.WHITE);
         Button btn = (Button)findViewById(R.id.button1);
         btn.setOnClickListener(new OnClickListener() {
 			
